@@ -79,6 +79,11 @@ header {
             padding: .3rem;
             border: 0.05rem solid #4BD17B;
             font-weight: 500; }
+            header nav ul li:last-of-type a:hover {
+              background-color: #4BD17B;
+              color: #fff; }
+        header nav ul li:hover a {
+          color: #4BD17B; }
         header nav ul li a {
           font-size: 0.4rem;
           font-weight: 400;
@@ -87,7 +92,8 @@ header {
           color: #fff;
           display: block;
           z-index: 2;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          -webkit-transition: all 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
 
 #banner {
   background: #161d54;
@@ -125,7 +131,20 @@ header {
         font-weight: 500;
         line-height: 1;
         letter-spacing: 0.05rem;
-        color: #fff; }
+        color: #fff;
+        -webkit-transition: all 0.2s cubic-bezier(0.18, 0.57, 0.5, 1.03); }
+      #banner #icons .icon:hover p {
+        color: #4BD17B; }
+      #banner #icons .icon:hover svg {
+        animation: moveupdown .3s ease-in-out; }
+
+@keyframes moveupdown {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(0); } }
 
 .article {
   padding: 4rem 6rem;
