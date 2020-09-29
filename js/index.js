@@ -35,3 +35,17 @@ for (var i = 0; i < card.length; i++) {
     this.children[0].style.transform = "scale(1)";
   });
 }
+
+////// formulario contacto ////////
+
+var formInputs = document.getElementsByClassName("form");
+
+for (var i = 0; i < formInputs.length; i++) {
+    formInputs[i].children[0].addEventListener("input", function(){
+        if(this.value.length == 0){
+            this.parentElement.children[1].classList.remove("filled"); 
+        }else{
+        this.parentElement.children[1].classList.add("filled");
+        }
+    });
+}
